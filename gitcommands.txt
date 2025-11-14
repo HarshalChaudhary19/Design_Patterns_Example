@@ -10,3 +10,7 @@ git checkout -b features
 git push -u origin features (or main or wherever we want to add the code)
 
 ---Merge and Rebase---
+git merge branchname
+git diff (for seeing the conflicts)
+    then from vscode check the differences and resolve the conflicts
+    there are three options......Jo hai wohi rakhna hai.....Jo nya hai wo.......Ya fir combination
