@@ -26,3 +26,13 @@ for Rebase
     git cherry-pick 7f4c12d someid someid2 
 
     And then do the next steps
+
+---Git Stash commands---
+    Basically we can store our uncommited changes to a stash (added or without putting to add stage)
+    git stash -----to put the uncommited changes to stash 
+    git stash -u       Will add the untracked files too
+    git stash staged      To add only the staged files and not the unstaged files 
+    git stash list        To get back the list of stashes
+    git stash apply stash@{stash_number}    To get data back from stash
+    ===Can also drop but command dekhni pdegi uski===
+    git stash pop       Works as both apply and drop =...just like in a stack
