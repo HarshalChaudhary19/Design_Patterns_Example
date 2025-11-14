@@ -1,0 +1,12 @@
+---Basic Commands---
+
+git init
+git add file.txt
+git add . 
+git commit -m "msg"
+git remote add origin repolink
+git branch -M main
+git checkout -b features
+git push -u origin features (or main or wherever we want to add the code)
+
+---Merge and Rebase---
