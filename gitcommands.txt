@@ -14,3 +14,15 @@ git merge branchname
 git diff (for seeing the conflicts)
     then from vscode check the differences and resolve the conflicts
     there are three options......Jo hai wohi rakhna hai.....Jo nya hai wo.......Ya fir combination
+
+for Rebase
+
+
+
+---Git Cherypick command---
+    Basically we use this when we want to merge some particular commits to some branch then we cherry pick them
+
+    git log branchname (To see all the commits with id's)
+    git cherry-pick 7f4c12d someid someid2 
+
+    And then do the next steps
