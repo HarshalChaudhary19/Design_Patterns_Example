@@ -1,3 +1,2 @@
-This will create conflicts
-
+This will create conflicts as this is in main file
 For the second command 
