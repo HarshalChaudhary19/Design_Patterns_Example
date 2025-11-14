@@ -1,2 +1,2 @@
-This will create conflicts as this is in main file
+This will create conflicts as this is in features as this is in main file
 For the second command 
