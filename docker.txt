@@ -1,3 +1,31 @@
 ===Docker===
 
-Commit 1
+Env varaibles
+    -->To set the env varaibles (docker run -e App_Color=blue service_name)
+    -->To inspect the env varaibles...then check under the ENV key (docker inspect service_name)
+
+Docker Images-->
+    =>How to create your own docker image for the service 
+    -->Create a file named "Dockerfile" and write instructions for setting up the application in it
+    -->In that DockerFile write what to RUN (To install dependencies and libraries)
+    --> Then what to copy (The source code)
+    --> Then the entrypoint (ENTRYPOINT MY_APP=/source_code/path/main.go go run)
+
+    -->Then use this command to build the image (docker build -f Dockerfile -t my_app_image D:/Projects/my_app ) 
+        --[f Dockerfile] is Optional ~~File Flag~~....(This tells docker which Dockerfile to use) ()
+        --[my_app_image] is Mandatory ~~Image Name Flag~~
+        --[. or D:/Projects/my_app] is Mandatory Build Context Folder (This is the folder that gets sent into the Build Environment)
+            The above {Build Context} must contain the Dockerfile,Source Code,Anything Copy needs
+
+Docker File-->
+    =>We have two things here Instructions(On left & In Caps) & Arguments(Arguments to the Instructions)
+    (1)==First Line specifies to start from the Base OS or another image (Which is mandatory)(ex. FROM Ubuntu)
+    (2)==>Then specify/install all dependencies required (RUN go mod download) 
+    (3)==>Then Coping the source code (COPY ./source_code)
+    (4)==>Then the EntryPoint (ENTRYPOINT ["/my-gin-app"])
+
+    So in the layers of Image creation (Base Ubuntu layer(100-200 mb),Changes in apt packages(300-400 mb),Changes in pip packages(5-6 mb),Source Code(200-300 kb),Update Entrypoint(0 kb))
+    (We can check this using the [docker history image_name] command )
+
+Docker (CMD vs EntryPoint)-->
+    -->CMD commands can be used like this CMD command param1 OR CMD["command","param1"]
