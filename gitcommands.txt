@@ -9,6 +9,9 @@ git branch -M main
 git checkout -b features
 git push -u origin features (or main or wherever we want to add the code)
 
+
+git log   (For checking git logs for git commit)
+
 ---Merge and Rebase---
 git merge branchname
 git diff (for seeing the conflicts)
@@ -51,6 +54,13 @@ for Rebase
     -->git revert --abort (Abort a revert....if conflict happens)
     -->git revert --continue (Continue after resolving merge request)
 
+-->Git squash<--
+    -->Basically Multiple commits ko ek mein merge krna 
+    For this use the following commands
+    git rebase -i Head~4     (here 4 is the number of commits we need to squash)
+    Press s for updating 
+    then use pick for the first and squash for the last
+    and then esc and use :wq
 
 ==Case Scenerios== 
 --> Lets suppose I have added 4 files to the staging area and we only need to commit 3 of those files then what
