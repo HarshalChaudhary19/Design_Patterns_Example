@@ -66,6 +66,16 @@ for Rebase
     pick means do the commit as it is....squash means last wale mein add krdo with commit message...and fixup means message bhi hata do
     and then esc and use :wq
 
+--->Git Hard Reset Vs Soft Reset Vs Mixed<---
+    -->Basically soft reset just gets the commited changes from commit to staged and ready to commit again
+    --->Mixed reset means commit to staged then to unstaged but the changes are there in the files to get staged and then commited again
+    --->Hard reset means commited changes will get back to staged, then to unstaged then the changes in the files will be removed too
+
+
 ==Case Scenerios== 
 --> Lets suppose I have added 4 files to the staging area and we only need to commit 3 of those files then what
---> 
+    ===>Simple hai, Staging area se hta do file ko....unstage krdo then commit krdo 
+--> Lets suppose I did rebase or squash so now my local files and the remote files differ with commits then how do we handle this
+    ==>We can either use git pull origin main (which will merge) or use git pull --rebase origin main
+    ==>Or We do not want our local changes at all and only the once that are on the remote ones so use this
+        "git fetch origin" & "git reset --hard origin/main" 
