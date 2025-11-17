@@ -12,6 +12,9 @@ git push -u origin features (or main or wherever we want to add the code)
 
 git log   (For checking git logs for git commit)
 
+
+git log   (For checking git logs for git commit)
+
 ---Merge and Rebase---
 git merge branchname
 git diff (for seeing the conflicts)
