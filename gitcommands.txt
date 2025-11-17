@@ -36,3 +36,22 @@ for Rebase
     git stash apply stash@{stash_number}    To get data back from stash
     ===Can also drop but command dekhni pdegi uski===
     git stash pop       Works as both apply and drop =...just like in a stack
+
+--=Git Revert Commands=--  (Whereas Git reset actually removes commits and history)
+    =>Basically what it does is that it does not delete the last commits instead what it does is it creates a new commit that
+      goes undergoes the changes introduced till the given commit (Reversing)
+    
+    Commands
+    -->git revert <commit-hash>  (Normaly reverting the commit and creating a new one)
+    -->git revert Head~3..Head  (or git revert Head) (This reverts last 3 commits) Or (the second command reverts the last one only)
+    -->git revert -n <commit-hash> (this applies the revert changes to the working directory without commiting yet so we can make changes and commit)
+    -->git revert A..B (Reverts range from here to here)
+    -->git revert -m 1 <merge-commit-hash> (This is used for merge commits here we are gonna use the parent#1 for the base reference)
+    -->git revert -q <hash> (Revert and auto-commit messages)
+    -->git revert --abort (Abort a revert....if conflict happens)
+    -->git revert --continue (Continue after resolving merge request)
+
+
+==Case Scenerios== 
+--> Lets suppose I have added 4 files to the staging area and we only need to commit 3 of those files then what
+--> 
