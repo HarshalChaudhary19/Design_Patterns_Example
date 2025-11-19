@@ -29,3 +29,15 @@ Docker File-->
 
 Docker (CMD vs EntryPoint)-->
     -->CMD commands can be used like this CMD command param1 OR CMD["command","param1"]
+
+
+Docker--Create your own network 
+-->docker network create \
+    --driver bridge \
+    --subnet 182.18.0.0/16
+    custom-isolated-network
+
+(How do we see the network settings using Inspect)
+=<Inspect Network>=
+Use command
+    -->docker inspect container_name  (Networks mein jakr check krlo IPAddress and macaddress Wgera)
